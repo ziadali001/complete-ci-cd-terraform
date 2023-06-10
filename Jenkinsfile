@@ -7,7 +7,6 @@ library identifier: 'library-jenkins@master', retriever: modernSCM(
     ]
 )
 
-
 pipeline {
     agent any
     tools {
