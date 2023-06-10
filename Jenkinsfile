@@ -1,10 +1,10 @@
 #!/usr/bin/env groovy
 
 library identifier: 'library-jenkins@master', retriever: modernSCM(
-        [$class: 'GitSCMSource',
-         remote: 'https://github.com/ziadali001/library-jenkins.git',
-         credentialsId: 'github-credentials'
-        ]
+    [$class: 'GitSCMSource',
+    remote: 'https://github.com/ziadali001/library-jenkins.git',
+     credentialsId: 'github-credentials'
+    ]
 )
 
 
@@ -57,7 +57,7 @@ pipeline {
         stage('deploy') {
             environment {
                 DOCKER_CREDS = credentials('dockerhub')
-
+            }
             steps {
                 script {
                    echo "waiting for EC2 server to initialize" 
